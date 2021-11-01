@@ -1,0 +1,15 @@
+INSERT INTO membro VALUES ('Pedro Januário', 'januaryguy77@gmail.com', 1999);
+INSERT INTO membro VALUES ('William Hollyson', 'imwilly3245@gmail.com', 1986);
+INSERT INTO membro VALUES ('Jennifer Daynight', 'jen_sun_day@hotmail.com', 1978);
+INSERT INTO membro VALUES ('Alice Rodrigues', 'alicerod880@sapo.pt', 2001);
+INSERT INTO membro VALUES ('Joana Vinagre', 'joca78vinagre5@gmail.com', 1998);
+INSERT INTO membro VALUES ('Josímar Perro', 'josiperrito90@gmail.com', 1990);
+INSERT INTO membro VALUES ('Antoine Griezmann', 'antgriezmann10@gmail.com', 1991);
+INSERT INTO membro VALUES ('Cristiano Ronaldo', 'papaicris7@hotmail.com', 1985);
+INSERT INTO membro VALUES ('Cristina Ferreira', 'diretora_tvi_cristina@sapo.pt', 1977);
+INSERT INTO membro VALUES ('Sofia Ribeiro', 'sofyribas84@sapo.pt', 1984);
+INSERT INTO membro VALUES ('Luís Fernandes', 'pizzidobenfas1904@gmail.com', 1989);
+INSERT INTO membro VALUES ('Roberto Gago', 'frangos_comigo1@hotmail.com', 1986);
+INSERT INTO membro VALUES ('Képler Ferreira', 'chefaopepe3@gmail.com', 1983);
+INSERT INTO membro VALUES ('Ederson Moraes', 'muralhaederson1@hotmail.com', 1993);
+INSERT INTO membro VALUES ('Liedson Muniz', 'levezinhoscp1906@hotmail.com', 1977);
