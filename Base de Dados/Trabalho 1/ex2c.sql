@@ -392,3 +392,4 @@ INSERT INTO gostade VALUES('Sofia Ribeiro','Polónia');
 INSERT INTO gostade VALUES('Sofia Ribeiro','Portugal');
 INSERT INTO gostade VALUES('Sofia Ribeiro','Roménia');
 INSERT INTO gostade VALUES('Sofia Ribeiro','Suécia');
+
