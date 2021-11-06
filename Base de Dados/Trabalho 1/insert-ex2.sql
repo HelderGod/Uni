@@ -1,4 +1,4 @@
-INSERT INTO membro VALUES ('Jacinto Leite Aquino Rego', 'jacintaoboss1956@gmail.com', 1956);
+INSERT INTO membro VALUES ('Jacinto Leite Capelo Rego', 'jacintaoboss1956@gmail.com', 1956);
 INSERT INTO membro VALUES ('Abrantes de Metelo', 'abmet3l00@gmail.com', 1986);
 INSERT INTO membro VALUES ('Jennifer Daynight', 'jen_sun_day@hotmail.com', 1978);
 INSERT INTO membro VALUES ('Alice Rodrigues', 'alicerod880@sapo.pt', 2001);
