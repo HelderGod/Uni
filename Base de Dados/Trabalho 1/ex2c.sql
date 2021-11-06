@@ -393,3 +393,57 @@ INSERT INTO gostade VALUES('Sofia Ribeiro','Portugal');
 INSERT INTO gostade VALUES('Sofia Ribeiro','Roménia');
 INSERT INTO gostade VALUES('Sofia Ribeiro','Suécia');
 
+INSERT INTO gostade VALUES('Luís Fernandes','Portugal');
+INSERT INTO gostade VALUES('Luís Fernandes','Angola');
+INSERT INTO gostade VALUES('Luís Fernandes','Brasil');
+INSERT INTO gostade VALUES('Luís Fernandes','Cabo Verde');
+INSERT INTO gostade VALUES('Luís Fernandes','Guiné-Bissau');
+INSERT INTO gostade VALUES('Luís Fernandes','Guiné Equatorial');
+INSERT INTO gostade VALUES('Luís Fernandes','Moçambique');
+INSERT INTO gostade VALUES('Luís Fernandes','São Tomé e Príncipe');
+INSERT INTO gostade VALUES('Luís Fernandes','Timor-Leste');
+INSERT INTO gostade VALUES('Luís Fernandes','Macau');
+
+INSERT INTO gostade VALUES('Roberto Gago','Portugal');
+INSERT INTO gostade VALUES('Roberto Gago','Angola');
+INSERT INTO gostade VALUES('Roberto Gago','Brasil');
+INSERT INTO gostade VALUES('Roberto Gago','Cabo Verde');
+INSERT INTO gostade VALUES('Roberto Gago','Guiné-Bissau');
+INSERT INTO gostade VALUES('Roberto Gago','Guiné Equatorial');
+INSERT INTO gostade VALUES('Roberto Gago','Moçambique');
+INSERT INTO gostade VALUES('Roberto Gago','São Tomé e Príncipe');
+INSERT INTO gostade VALUES('Roberto Gago','Timor-Leste');
+INSERT INTO gostade VALUES('Roberto Gago','Macau');
+
+INSERT INTO gostade VALUES('Képler Ferreira','Portugal');
+INSERT INTO gostade VALUES('Képler Ferreira','Angola');
+INSERT INTO gostade VALUES('Képler Ferreira','Brasil');
+INSERT INTO gostade VALUES('Képler Ferreira','Cabo Verde');
+INSERT INTO gostade VALUES('Képler Ferreira','Guiné-Bissau');
+INSERT INTO gostade VALUES('Képler Ferreira','Guiné Equatorial');
+INSERT INTO gostade VALUES('Képler Ferreira','Moçambique');
+INSERT INTO gostade VALUES('Képler Ferreira','São Tomé e Príncipe');
+INSERT INTO gostade VALUES('Képler Ferreira','Timor-Leste');
+INSERT INTO gostade VALUES('Képler Ferreira','Macau');
+
+INSERT INTO gostade VALUES('Ederson Moraes','Portugal');
+INSERT INTO gostade VALUES('Ederson Moraes','Angola');
+INSERT INTO gostade VALUES('Ederson Moraes','Brasil');
+INSERT INTO gostade VALUES('Ederson Moraes','Cabo Verde');
+INSERT INTO gostade VALUES('Ederson Moraes','Guiné-Bissau');
+INSERT INTO gostade VALUES('Ederson Moraes','Guiné Equatorial');
+INSERT INTO gostade VALUES('Ederson Moraes','Moçambique');
+INSERT INTO gostade VALUES('Ederson Moraes','São Tomé e Príncipe');
+INSERT INTO gostade VALUES('Ederson Moraes','Timor-Leste');
+INSERT INTO gostade VALUES('Ederson Moraes','Macau');
+
+INSERT INTO gostade VALUES('Liedson Muniz','Portugal');
+INSERT INTO gostade VALUES('Liedson Muniz','Angola');
+INSERT INTO gostade VALUES('Liedson Muniz','Brasil');
+INSERT INTO gostade VALUES('Liedson Muniz','Cabo Verde');
+INSERT INTO gostade VALUES('Liedson Muniz','Guiné-Bissau');
+INSERT INTO gostade VALUES('Liedson Muniz','Guiné Equatorial');
+INSERT INTO gostade VALUES('Liedson Muniz','Moçambique');
+INSERT INTO gostade VALUES('Liedson Muniz','São Tomé e Príncipe');
+INSERT INTO gostade VALUES('Liedson Muniz','Timor-Leste');
+INSERT INTO gostade VALUES('Liedson Muniz','Macau');
