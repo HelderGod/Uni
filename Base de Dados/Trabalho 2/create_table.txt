@@ -1,0 +1,9 @@
+DROP TABLE IF EXISTS animals CASCADE;
+CREATE TABLE animals (
+  name VARCHAR(100),
+  register DECIMAL PRIMARY KEY,
+  sex VARCHAR(10),
+  birthday DATE,
+  habitat VARCHAR(100),
+  FOREIGN KEY
+);
