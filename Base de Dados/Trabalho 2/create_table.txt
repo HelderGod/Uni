@@ -5,5 +5,33 @@ CREATE TABLE animals (
   sex VARCHAR(10),
   birthday DATE,
   habitat VARCHAR(100),
-  FOREIGN KEY
+);
+
+DROP TABLE IF EXISTS bio_class CASCADE;
+CREATE TABLE bio_class (
+  classes VARCHAR(50),
+  orders VARCHAR(50),
+  family VARCHAR(50),
+  species VARCHAR(50)
+);
+
+-------------------------------------------------------------------------------------
+
+DROP TABLE IF EXISTS animals_place CASCADE;
+CREATE TABLE animals_place (
+  coords VARCHAR(2) PRIMARY KEY,
+  area DECIMAL,
+  atmosphere VARCHAR(100),
+  environment VARCHAR(100)
+);
+
+-------------------------------------------------------------------------------------
+
+DROP TABLE IF EXISTS employees CASCADE;
+CREATE TABLE employees (
+  name VARCHAR(100),
+  nif DECIMAL PRIMARY KEY,
+  start DATE,
+  cellphone DECIMAL UNIQUE,
+  telephone DECIMAL UNIQUE
 );
