@@ -39,9 +39,29 @@ CREATE TABLE employees (
 DROP TABLE IF EXISTS keepers CASCADE;
 CREATE TABLE keepers (
   animal_name VARCHAR(100),
-  animal_register DECIMAL,
-  FOREIGN KEY (animal_register) REFERENCES animals,
+  animal_register DECIMAL PRIMARY KEY,
+  FOREIGN KEY (animal_register) REFERENCES animals ON DELETE RESTRICT,
   employee_name VARCHAR(100),
   employee_nif DECIMAL,
-  FOREIGN KEY (employee_nif) REFERENCES employees
+  FOREIGN KEY (employee_nif) REFERENCES employees ON DELETE RESTRICT
+);
+
+DROP TABLE IF EXISTS auxiliar_keepers CASCADE;
+CREATE TABLE auxiliar_keepers (
+  place_coords VARCHAR(2),
+  FOREIGN KEY (place_coords) REFERENCES animals_place ON DELETE RESTRICT,
+  employee_name VARCHAR(100),
+  employee_nif DECIMAL PRIMARY KEY,
+  FOREIGN KEY (employee_nif) REFERENCES employees ON DELETE RESTRICT
+);
+
+DROP TABLE IF EXISTS vets CASCADE;
+CREATE TABLE vets (
+  employee_name VARCHAR(100),
+  employee_nif DECIMAL PRIMARY KEY,
+  FOREIGN KEY (employee_nif) REFERENCES employees ON DELETE RESTRICT
+);
+
+DROP TABLE IF EXISTS consults CASCADE;
+CREATE TABLE consults (
 );
