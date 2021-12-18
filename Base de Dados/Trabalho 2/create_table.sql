@@ -64,4 +64,28 @@ CREATE TABLE vets (
 
 DROP TABLE IF EXISTS consults CASCADE;
 CREATE TABLE consults (
+  employee_nif DECIMAL PRIMARY KEY,
+  FOREIGN KEY (employee_nif) REFERENCES vets ON DELETE RESTRICT,
+  animal_register DECIMAL,
+  FOREIGN KEY (animal_register) REFERENCES animals ON DELETE RESTRICT
+);
+
+DROP TABLE IF EXISTS diagnosis CASCADE;
+CREATE TABLE diagnosis (
+  animal_register DECIMAL,
+  FOREIGN KEY (animal_register) REFERENCES animals ON DELETE RESTRICT,
+  employee_nif DECIMAL PRIMARY KEY,
+  FOREIGN KEY (employee_nif) REFERENCES consults ON DELETE RESTRICT,
+  time DATE,
+  diagnostic VARCHAR(50)
+);
+
+DROP TABLE IF EXISTS treatment CASCADE;
+CREATE TABLE treatment (
+  animal_register DECIMAL,
+  FOREIGN KEY (animal_register) REFERENCES animals ON DELETE RESTRICT,
+  employee_nif DECIMAL PRIMARY KEY,
+  FOREIGN KEY (employee_nif) REFERENCES consults ON DELETE RESTRICT,
+  time DATE,
+  cure VARCHAR(50)
 );
