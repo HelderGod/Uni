@@ -5,7 +5,7 @@ import java.util.Random;
 
 public class Cipher {
 
-    private static String normalize(String naturalText) {
+    private static String normalize(String naturalText) {                               //alínea 1
         String noAccentString =                                                         //retira os acentos da string
             Normalizer
                 .normalize(naturalText, Normalizer.Form.NFD)
@@ -16,7 +16,7 @@ public class Cipher {
         return normalString;
     }
     
-    public static String encode(String plainText, int cols) {
+    public static String encode(String plainText, int cols) {                           //alínea 2
         String normalize = Cipher.normalized(plainText);
         boolean c = normalize.length() % cols != 0;
         String randomText = "";
@@ -39,5 +39,14 @@ public class Cipher {
         }
         code.append(randomText);
         return code.toString();
+    }
+    
+    public static List<Integer> findDividers(int n) {               //alínea 3
+        List<Integer> divs = new ArrayList<Integer>();              //cria uma lista para os divisores da variável n
+        for(int i=1; i<=n; i++) {                                   //neste ciclo for, a variável i percorre todos os inteiros até n (inclusivé)
+            if(n % i == 0)                                          // se a divisão de n por i der resto 0, então i é divisor de n
+                divs.add(i);
+        }
+        return divs;                                                //retorna a lista de inteiros já com os divisores de n
     }
 }
