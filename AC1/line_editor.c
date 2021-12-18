@@ -4,7 +4,7 @@
 #include <stdbool.h>
 #include <limits.h>
 
-struct node {
+struct node {								//Linked List
 	struct node *prev;
 	char *data[100];
 	struct node *next;
