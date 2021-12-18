@@ -1,10 +1,7 @@
 package Trabalho;
 
-import java.util.Scanner;
-//import java.lang.Character;
 import java.text.Normalizer;
-import java.text.Normalizer.Form;
-import java.util.regex.Pattern;
+import java.util.Random;
 
 public class Cipher {
 
