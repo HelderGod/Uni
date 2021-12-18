@@ -1,5 +1,3 @@
-package Trabalho;
-
 import java.text.Normalizer;
 import java.util.Random;
 import java.util.ArrayList;
