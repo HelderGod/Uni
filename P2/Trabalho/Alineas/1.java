@@ -7,4 +7,4 @@ public static String normalized(String naturalText) {                           
         String noPunctString = noSpaceString.replaceAll("\\p{Punct}", "");              //retira os sinais de pontuação da string
         String normalString = noPunctString.toLowerCase();                              //coloca todas as letras da string minúsculas
         return normalString;
-    }
+}
