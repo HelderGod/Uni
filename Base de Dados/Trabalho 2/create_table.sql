@@ -4,7 +4,8 @@ CREATE TABLE animals (
   register DECIMAL PRIMARY KEY,
   sex VARCHAR(10),
   birthday DATE,
-  habitat VARCHAR(100),
+  coords_place VARCHAR(2),
+  FOREIGN KEY (coords_place) REFERENCES animals_place ON DELETE RESTRICT
 );
 
 DROP TABLE IF EXISTS bio_class CASCADE;
@@ -15,6 +16,22 @@ CREATE TABLE bio_class (
   species VARCHAR(50)
 );
 
+DROP TABLE IF EXISTS capture CASCADE;
+CREATE TABLE capture (
+  local VARCHAR(50),
+  data DATE,
+  animal_register DECIMAL PRIMARY KEY,
+  FOREIGN KEY (animal_register) REFERENCES animals ON DELETE RESTRICT
+);
+
+DROP TABLE IF EXISTS captivity CASCADE;
+CREATE TABLE captivity (
+  mum_register DECIMAL,
+  dad_register DECIMAL,
+  animal_register DECIMAL,
+  FOREIGN KEY (animal_register) REFERENCES animals ON DELETE RESTRICT,
+  PRIMARY KEY (mum_register, dad_register, animal_register)
+);
 -------------------------------------------------------------------------------------
 
 DROP TABLE IF EXISTS animals_place CASCADE;
@@ -88,4 +105,13 @@ CREATE TABLE treatment (
   FOREIGN KEY (employee_nif) REFERENCES consults ON DELETE RESTRICT,
   time DATE,
   cure VARCHAR(50)
+);
+
+DROP TABLE IF EXISTS responsible CASCADE;
+CREATE TABLE responsible (
+  employee_nif DECIMAL,
+  FOREIGN KEY (employee_nif) REFERENCES employees ON DELETE RESTRICT,
+  nif DECIMAL,
+  FOREIGN KEY (nif) REFERENCES employees ON DELETE RESTRICT,
+  PRIMARY KEY (nif, employee_nif)
 );
