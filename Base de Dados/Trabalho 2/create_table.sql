@@ -3,7 +3,7 @@ CREATE TABLE animals (
   name VARCHAR(100),
   register DECIMAL PRIMARY KEY,
   sex VARCHAR(10),
-  birthday DATE,
+  birthday DATE
 );
 
 DROP TABLE IF EXISTS bio_class CASCADE;
@@ -40,7 +40,7 @@ CREATE TABLE animals_place (
   environment VARCHAR(100),
   animal_register DECIMAL,
   FOREIGN KEY (animal_register) REFERENCES animals ON DELETE RESTRICT,
-  (coords, animal_register) PRIMARY KEY
+  PRIMARY KEY (coords, animal_register)
 );
 
 -------------------------------------------------------------------------------------
