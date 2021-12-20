@@ -4,8 +4,6 @@ CREATE TABLE animals (
   register DECIMAL PRIMARY KEY,
   sex VARCHAR(10),
   birthday DATE,
-  coords_place VARCHAR(2),
-  FOREIGN KEY (coords_place) REFERENCES animals_place ON DELETE RESTRICT
 );
 
 DROP TABLE IF EXISTS bio_class CASCADE;
@@ -36,10 +34,13 @@ CREATE TABLE captivity (
 
 DROP TABLE IF EXISTS animals_place CASCADE;
 CREATE TABLE animals_place (
-  coords VARCHAR(2) PRIMARY KEY,
+  coords VARCHAR(2),
   area DECIMAL,
   atmosphere VARCHAR(100),
-  environment VARCHAR(100)
+  environment VARCHAR(100),
+  animal_register DECIMAL,
+  FOREIGN KEY (animal_register) REFERENCES animals ON DELETE RESTRICT,
+  (coords, animal_register) PRIMARY KEY
 );
 
 -------------------------------------------------------------------------------------
