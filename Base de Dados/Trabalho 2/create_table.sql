@@ -12,7 +12,9 @@ CREATE TABLE bio_class (
   classes VARCHAR(50),
   orders VARCHAR(50),
   family VARCHAR(50),
-  species VARCHAR(50)
+  species VARCHAR(50),
+  animal_register DECIMAL PRIMARY KEY,
+  FOREIGN KEY (animal_register) REFERENCES animals ON DELETE RESTRICT
 );
 
 DROP TABLE IF EXISTS capture CASCADE;
