@@ -12,9 +12,7 @@ CREATE TABLE bio_class (
   classes VARCHAR(50),
   orders VARCHAR(50),
   family VARCHAR(50),
-  species VARCHAR(50),
-  animal_register DECIMAL PRIMARY KEY,
-  FOREIGN KEY (animal_register) REFERENCES animals ON DELETE RESTRICT
+  species VARCHAR(50)
 );
 
 DROP TABLE IF EXISTS capture CASCADE;
@@ -31,6 +29,8 @@ CREATE TABLE captivity (
   dad_register DECIMAL,
   animal_register DECIMAL,
   FOREIGN KEY (animal_register) REFERENCES animals ON DELETE RESTRICT,
+  FOREIGN KEY (mum_register) REFERENCES animals ON DELETE RESTRICT,
+  FOREIGN KEY (dad_register) REFERENCES animals ON DELETE RESTRICT,
   PRIMARY KEY (mum_register, dad_register, animal_register)
 );
 -------------------------------------------------------------------------------------
@@ -78,21 +78,12 @@ CREATE TABLE vets (
   FOREIGN KEY (employee_nif) REFERENCES employees ON DELETE RESTRICT
 );
 
-DROP TABLE IF EXISTS consults CASCADE;
-CREATE TABLE consults (
-  employee_nif DECIMAL,
-  FOREIGN KEY (employee_nif) REFERENCES vets ON DELETE RESTRICT,
-  animal_register DECIMAL,
-  FOREIGN KEY (animal_register) REFERENCES animals ON DELETE RESTRICT,
-  PRIMARY KEY (employee_nif, animal_register)
-);
-
 DROP TABLE IF EXISTS diagnosis CASCADE;
 CREATE TABLE diagnosis (
   animal_register DECIMAL,
   FOREIGN KEY (animal_register) REFERENCES animals ON DELETE RESTRICT,
   employee_nif DECIMAL,
-  FOREIGN KEY (employee_nif) REFERENCES consults ON DELETE RESTRICT,
+  FOREIGN KEY (employee_nif) REFERENCES vets ON DELETE RESTRICT,
   time DATE,
   diagnostic VARCHAR(50)
 );
@@ -102,7 +93,7 @@ CREATE TABLE treatment (
   animal_register DECIMAL,
   FOREIGN KEY (animal_register) REFERENCES animals ON DELETE RESTRICT,
   employee_nif DECIMAL,
-  FOREIGN KEY (employee_nif) REFERENCES consults ON DELETE RESTRICT,
+  FOREIGN KEY (employee_nif) REFERENCES vets ON DELETE RESTRICT,
   time DATE,
   cure VARCHAR(50)
 );
